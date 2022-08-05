@@ -2,16 +2,16 @@ package com.wonit.notifier.slack;
 
 import com.wonit.notifier.Notifier;
 import com.wonit.notifier.Registrar;
-import com.wonit.notifier.model.NotifyMessage;
+import com.wonit.notifier.domain.Message;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SlackNotifierDispatcher implements Notifier, Registrar {
+public class NotifierDispatcher implements Notifier, Registrar {
 
     private final List<Notifier> containers = new ArrayList<>();
 
     @Override
-    public String execute(NotifyMessage message) {
+    public String execute(Message message) {
         Notifier notifier = containers.stream()
                 .filter(n -> n.isSupport(message))
                 .findFirst()
@@ -20,7 +20,7 @@ public class SlackNotifierDispatcher implements Notifier, Registrar {
     }
 
     @Override
-    public boolean isSupport(NotifyMessage message) {
+    public boolean isSupport(Message message) {
         throw new UnsupportedOperationException();
     }
 

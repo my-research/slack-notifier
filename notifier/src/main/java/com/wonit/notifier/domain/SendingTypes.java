@@ -1,4 +1,4 @@
-package com.wonit.notifier.model;
+package com.wonit.notifier.domain;
 
 public enum SendingTypes {
     SLACK_HTTP, SLACK_PROGRAMMING

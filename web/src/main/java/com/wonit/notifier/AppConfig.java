@@ -1,7 +1,7 @@
 package com.wonit.notifier;
 
 import com.wonit.notifier.slack.SlackApiNotifier;
-import com.wonit.notifier.slack.SlackNotifierDispatcher;
+import com.wonit.notifier.slack.NotifierDispatcher;
 import com.wonit.notifier.slack.SlackSdkNotifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,10 +15,10 @@ public class AppConfig {
     }
 
     @Bean
-    public Notifier slackNotifierDispatcher(SlackApiNotifier apiNotifier,
+    public Notifier notifierDispatcher(SlackApiNotifier apiNotifier,
                                              SlackSdkNotifier sdkNotifier) {
 
-        SlackNotifierDispatcher container = new SlackNotifierDispatcher();
+        NotifierDispatcher container = new NotifierDispatcher();
         container.register(apiNotifier);
         container.register(sdkNotifier);
         return container;

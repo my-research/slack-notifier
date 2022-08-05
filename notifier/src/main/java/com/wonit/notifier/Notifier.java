@@ -1,8 +1,8 @@
 package com.wonit.notifier;
 
-import com.wonit.notifier.model.NotifyMessage;
+import com.wonit.notifier.domain.Message;
 
 public interface Notifier {
-    String execute(NotifyMessage message);
-    boolean isSupport(NotifyMessage message);
+    String execute(Message message);
+    boolean isSupport(Message message);
 }
