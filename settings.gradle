@@ -1,0 +1,4 @@
+rootProject.name = 'slack-notifier'
+
+include 'notifier'
+include 'web'
