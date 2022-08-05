@@ -1,0 +1,4 @@
+notifier:
+  slack:
+    oauth_token: ${WONIK_SLACK_OAUTH_TOKEN}
+    webhook_url: ${WONIK_SLACK_WEBHOOK_URL}
