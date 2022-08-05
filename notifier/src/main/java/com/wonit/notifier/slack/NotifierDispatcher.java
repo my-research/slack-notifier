@@ -1,12 +1,12 @@
 package com.wonit.notifier.slack;
 
+import com.wonit.notifier.Dispatcher;
 import com.wonit.notifier.Notifier;
-import com.wonit.notifier.Registrar;
 import com.wonit.notifier.domain.Message;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NotifierDispatcher implements Notifier, Registrar {
+public class NotifierDispatcher implements Dispatcher {
 
     private final List<Notifier> containers = new ArrayList<>();
 
@@ -32,3 +32,4 @@ public class NotifierDispatcher implements Notifier, Registrar {
         containers.add(notifier);
     }
 }
+

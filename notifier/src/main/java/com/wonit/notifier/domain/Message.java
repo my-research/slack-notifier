@@ -1,13 +1,9 @@
 package com.wonit.notifier.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Value;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+@Value(staticConstructor = "of")
 public class Message {
-    private SendingTypes type;
-    private String text;
+    SendingTypes type;
+    String text;
 }

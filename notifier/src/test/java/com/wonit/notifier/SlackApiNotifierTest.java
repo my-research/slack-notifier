@@ -17,6 +17,6 @@ class SlackApiNotifierTest {
 
     @Test
     void name() {
-        sut.execute(new Message(SendingTypes.SLACK_HTTP, "this is api"));
+        sut.execute(Message.of(SendingTypes.SLACK_HTTP, "this is api"));
     }
 }

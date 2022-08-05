@@ -17,6 +17,6 @@ class SlackSdkNotifierTest {
 
     @Test
     void name() {
-        sut.execute(new Message(SendingTypes.SLACK_PROGRAMMING, "hello"));
+        sut.execute(Message.of(SendingTypes.SLACK_PROGRAMMING, "hello"));
     }
 }
