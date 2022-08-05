@@ -6,7 +6,7 @@ import com.wonit.notifier.model.NotifyMessage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SlackNotifierComposite implements Notifier, Registrar {
+public class SlackNotifierDispatcher implements Notifier, Registrar {
 
     private final List<Notifier> containers = new ArrayList<>();
 

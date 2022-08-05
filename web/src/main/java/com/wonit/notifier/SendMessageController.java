@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class SendMessageController {
 
-    private final Notifier slackNotifierContainer;
+    private final Notifier slackNotifierDispatcher;
 
     @PostMapping("/api/message")
     public ResponseEntity<String> sendMessage(@RequestBody NotifyMessage message) {
-        String response = slackNotifierContainer.execute(message);
+        String response = slackNotifierDispatcher.execute(message);
         return ResponseEntity.ok(response);
     }
 }
