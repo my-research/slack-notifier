@@ -8,6 +8,7 @@ import com.slack.api.methods.SlackApiException;
 import com.slack.api.methods.request.chat.ChatPostMessageRequest;
 import com.slack.api.methods.response.chat.ChatPostMessageResponse;
 import com.wonit.notifier.AbstractNotifier;
+import com.wonit.notifier.Notifier;
 import com.wonit.notifier.domain.Message;
 import com.wonit.notifier.domain.Specification;
 import java.io.IOException;
@@ -28,7 +29,7 @@ public class SlackSdkNotifier extends AbstractNotifier {
     }
 
     @Override
-    public String execute(Message message) {
+    public String execute2(Message message) {
         Slack slack = Slack.getInstance();
 
         try {
