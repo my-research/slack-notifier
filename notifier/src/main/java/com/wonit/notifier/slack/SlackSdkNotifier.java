@@ -28,7 +28,7 @@ public class SlackSdkNotifier extends AbstractNotifier {
         super(supportSpec);
     }
 
-    @Override
+
     public String execute2(Message message) {
         Slack slack = Slack.getInstance();
 
@@ -45,5 +45,10 @@ public class SlackSdkNotifier extends AbstractNotifier {
             e.printStackTrace();
             return "error";
         }
+    }
+
+    @Override
+    public String execute(Message message) {
+        return null;
     }
 }

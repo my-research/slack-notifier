@@ -18,7 +18,7 @@ public class SlackApiNotifier extends AbstractNotifier {
     private static final Specification supportSpec = Specification.of(SLACK_HTTP);
 
     @Value("${notifier.slack.webhook_url}")
-    private String INCOMING_WEBHOOK_URL;
+    private String INCOMING_WEBHOOK_URL = "https://hooks.slack.com/services/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";
     private final RestTemplate rest;
 
     public SlackApiNotifier(RestTemplate rest) {
